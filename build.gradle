@@ -1,0 +1,24 @@
+// build.gradle
+// Build and test the code that "overrides" final methods in Groovy
+//
+
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+defaultTasks 'test'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.codehaus.groovy:groovy:1.8.6'
+  testCompile 'junit:junit:4.5'
+}
+
+//eclipse {
+//  project {
+//    natures << 'org.eclipse.jdt.groovy.core.groovyNature'
+//  }
+//}
+
